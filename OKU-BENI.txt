@@ -1,0 +1,7 @@
+KURULUM (bir kere):
+1) Node.js yukle: https://nodejs.org  (LTS surumu)
+2) Bu klasorde terminal/komut istemi ac ve su komutu yaz:  npm install
+3) fotograflar klasorune herkesin ismiyle klasor ac, icine repost fotograflarini koy.
+4) Baslat:  npm start   (veya Windows'ta BASLAT.bat'a cift tikla)
+5) Tarayicida http://localhost:3000 ac. Ayni Wi-Fi'daki arkadaslar terminalde yazan IP adresiyle girer.
+Internet uzerinden oynamak icin: ngrok / cloudflared tunnel veya Render, Railway gibi bir hosting kullanabilirsin.

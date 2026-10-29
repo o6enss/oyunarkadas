@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bu Kimin Reposu?</title><link rel="stylesheet" href="style.css"></head><body>
+<header><h1>📸 Bu Kimin Reposu?</h1><span id="me"></span></header>
+<main>
+<section id="v-login" class="card narrow"><h2>Hoş geldin!</h2><p>Başlamak için bir isim gir (zorunlu).</p>
+<input id="nameIn" maxlength="20" placeholder="İsmin" autofocus><button id="nameBtn">Giriş</button></section>
+
+<section id="v-home" hidden><div class="two">
+<div class="card"><h2>➕ Oda Oluştur</h2><p id="info" class="muted"></p>
+<label>Oda ismi (zorunlu değil)<input id="rName" maxlength="30"></label>
+<label>Şifre (zorunlu değil)<input id="rPass" maxlength="30"></label>
+<label>Kişi sayısı<input id="rMax" type="number" min="1" max="30" value="8"></label>
+<label>Her kişiden kaç fotoğraf?<input id="rPer" type="number" min="1" value="3"></label>
+<button id="createBtn">Odayı Oluştur</button></div>
+<div class="card"><h2>🚪 Odalar</h2><div id="rooms"></div></div></div></section>
+
+<section id="v-room" hidden><div class="two"><div class="card"><h2 id="rTitle"></h2><p id="rSub" class="muted"></p><div id="rPlayers" class="plist"></div>
+<button id="startBtn">▶ Oyunu Başlat</button><p id="rWait" class="muted"></p><button id="leaveBtn" class="ghost">Odadan çık</button></div><div class="chatslot"></div></div></section>
+
+<section id="v-game" hidden class="card narrow center"><div class="bar"><i id="gBar"></i></div><p id="gProg" class="muted"></p>
+<img id="gImg" alt=""><h2>Bu kimin reposu?</h2><input id="gIn" maxlength="40" placeholder="İsmi yaz..."><button id="gBtn">Devam →</button></section>
+
+<section id="v-wait" hidden><div class="two"><div class="card"><h2 id="wTitle"></h2><div id="wPlayers" class="plist"></div>
+<button id="revealBtn">📊 Sonuçları göster</button></div><div class="chatslot"></div></div></section>
+
+<section id="v-results" hidden><div class="two"><div class="card"><h2>🏆 Sonuçlar</h2><div id="scores" class="plist"></div><div id="tabs" class="tabs"></div><div id="items"></div>
+<button id="againBtn">🔁 Yeniden oyna (oda sahibi)</button><button id="leave2" class="ghost">Odadan çık</button></div><div class="chatslot"></div></div></section>
+</main>
+<div id="chat" class="card" hidden><h3>💬 Sohbet</h3><div id="msgs"></div><div id="typ" class="muted"></div>
+<div id="emo"></div><div class="row"><input id="cIn" maxlength="500" placeholder="Mesaj yaz..."><button id="cBtn">Gönder</button></div></div>
+<div id="toast"></div><script src="/socket.io/socket.io.js"></script><script src="app.js"></script></body></html>
